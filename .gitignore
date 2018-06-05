@@ -1,2 +1,4 @@
 # ignore data directory
 /data/*
+#rivers directory of science and arts
+/river/*
