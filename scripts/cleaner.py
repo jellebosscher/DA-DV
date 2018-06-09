@@ -1,19 +1,25 @@
 # Jelle Bosscher - 10776583
 # Script to clean the gun violence data
 import csv, sys, itertools
+import requests
 
 
 raw = []
+
+#TODO remove relationship feature
 
 with open('../data/stage3.csv') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     for row in reader:
         raw.append(row)
 
-
-
 # Count missing values per feature
 empty_cells_per_column = [0]*29
+
+for entry in raw[1]:
+    print('-'*80)
+    print(entry)
+    print('-'*80)
 
 j = 0
 for attribute in raw[0]:
@@ -45,24 +51,44 @@ def csv_dict_to_py_dict(csv_string):
 
 
 # calculate the average age for every entry with given ages.
-dict_b = {}
+avg_age_dict = {}
 
 for row in raw[1:]:
     key = row[0]
     if row[19] is not '':
         age_dict = csv_dict_to_py_dict(row[19])
-        dict_b[key] = "{:.2f}".format(sum(age_dict.values())/len(age_dict))
+        avg_age_dict[key] = "{:.2f}".format(sum(age_dict.values())/len(age_dict))
     else:
-        dict_b[key] = ''
+        avg_age_dict[key] = ''
 
-#add new feature to first row
+#add new feature to the label row (the first row) of the results
 results = [raw[0]]
 results[0].insert(20, "average_age")
 
-#append all rows to new results, inserting new value in every row
+lat_long_dict = {}
+
+# strip house numbers from adress.
+for row in raw[1:500]:
+    if (row[14] is '') or (row[16] is ''):
+        print (row)       
+
+
+
+
+
+
+
+
+
+
+
+# ----------------------------------------------------------------------
+#append all rows to new results, inserting new values in every row
 for row in raw[1:]:
-    row.insert(20,dict_b[row[0]])
+    row.insert(20,avg_age_dict[row[0]]) #insert avg_age
     results.append(row)
+
+#-----------------------------------------------------------------------
 
 
 
