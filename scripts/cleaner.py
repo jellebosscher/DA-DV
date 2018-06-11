@@ -1,11 +1,12 @@
 # Jelle Bosscher - 10776583
 # Script to clean the gun violence data
+from global_functions import csv_dict_to_py_dict
 import random, csv, sys, itertools
 from geopy.geocoders import GoogleV3
 
-raw = []
 
-#TODO remove relationship feature
+
+raw = []
 
 with open('../data/stage3.csv') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
@@ -32,17 +33,9 @@ for row in empty_cells_per_column:
 print("The whole data set has {} rows".format(len(raw)))
 
 
+
 # Start of cleaing, add new feature for avg_age; is float, not required
 print('-'*80)
-
-# helper function to turn the CSV formatted dict to use in python
-def csv_dict_to_py_dict(csv_string):
-    if '::' in csv_string:
-        py_dict = dict((key, int(value)) for key, value in (item.split('::') for item in csv_string.split('||')))
-    elif ':' in csv_string:
-        py_dict = dict((key, int(value)) for key, value in (item.split(':') for item in csv_string.split('|')))
-    return py_dict
-
 
 # calculate the average age for every entry with given ages.
 avg_age_dict = {}

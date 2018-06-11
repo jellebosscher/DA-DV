@@ -1,4 +1,11 @@
 # ignore data directory
 /data/*
+
+#don't ignore population data
+!/data/population/*
+
+# ignore chache folder
+/scripts/__pycache__/*
+
 #rivers directory of science and arts
 /river/*
