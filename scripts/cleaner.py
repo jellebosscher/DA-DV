@@ -1,8 +1,7 @@
 # Jelle Bosscher - 10776583
 # Script to clean the gun violence data
-import csv, sys, itertools
-import requests
-
+import random, csv, sys, itertools
+from geopy.geocoders import GoogleV3
 
 raw = []
 
@@ -15,11 +14,6 @@ with open('../data/stage3.csv') as csvfile:
 
 # Count missing values per feature
 empty_cells_per_column = [0]*29
-
-for entry in raw[1]:
-    print('-'*80)
-    print(entry)
-    print('-'*80)
 
 j = 0
 for attribute in raw[0]:
@@ -61,31 +55,28 @@ for row in raw[1:]:
     else:
         avg_age_dict[key] = ''
 
-#add new feature to the label row (the first row) of the results
-results = [raw[0]]
-results[0].insert(20, "average_age")
-
-lat_long_dict = {}
-
-# strip house numbers from adress.
-for row in raw[1:500]:
-    if (row[14] is '') or (row[16] is ''):
-        print (row)       
-
-
-
-
-
-
-
-
-
+#TODO strip house numbers from adress.
 
 
 # ----------------------------------------------------------------------
+# creating the results
+
+# add new feature to the label row (the first row) of the results
+# and remove several features
+results = [raw[0]]
+del results[0][15] #location_description
+del results[0][21] #participant_name
+del results[0][21] #participant_relationship
+results[0].insert(19, "participant_average_age")
+print(results[0])
+
 #append all rows to new results, inserting new values in every row
+# and removing several values from every row
 for row in raw[1:]:
-    row.insert(20,avg_age_dict[row[0]]) #insert avg_age
+    del row[15] #location_description
+    del row[21] #participant_name
+    del row[21] #participant_relationship
+    row.insert(19,avg_age_dict[row[0]]) #insert avg_age
     results.append(row)
 
 #-----------------------------------------------------------------------
@@ -104,8 +95,8 @@ print('-'*80)
 print("Example sample:")
 print("{:<30s} - {:<20s}".format(results[0][19],results[0][20]))
 
-for row in results[12100:12140]:
-    print("{:<30s} - {:<20s}".format(row[19],row[20]))
+#for row in results[12100:12140]:
+#    print("{:<30s} - {:<20s}".format(row[18],row[19]))
 
 
 
