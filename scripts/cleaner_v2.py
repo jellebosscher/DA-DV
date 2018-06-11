@@ -1,6 +1,7 @@
 # Jelle Bosscher - 10776583
 # Script to clean the gun violence data
 # only working with lat + lng
+from api_keys import api_keys
 import random, csv, sys, itertools
 from geopy.geocoders import GoogleV3
 
@@ -39,7 +40,6 @@ print('-'*80)
 #TODO fix missing lat + lng
 #geolocator = Nominatim(country_bias="United States")
 
-api_keys = ['AIzaSyCwIHCbi10jJEX-V9J2Bl-aw2-07vbt9sI','AIzaSyBQcftzxiXV48WffO-906cDgGdn0nD0pps','AIzaSyCqFbCDyGy7U2CZZ9FCM6LEV59wzEQ_UHs','AIzaSyCPVONF8HJsol32Ll_qxQ_RI3Rf1NO8-Vc']
 
 geolocator = GoogleV3(api_key=random.choice(api_keys))
  

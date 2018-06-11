@@ -4,6 +4,9 @@
 #don't ignore population data
 !/data/population/*
 
+#ignore api_keys directory
+/api_keys/
+
 # ignore chache folder
 /scripts/__pycache__/*
 
