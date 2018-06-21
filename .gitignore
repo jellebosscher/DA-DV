@@ -1,4 +1,17 @@
 # ignore data directory
 /data/*
+
+#don't ignore population data
+!/data/population/*
+
+#ignore api_keys directory
+/api_keys/
+
+# ignore chache folder
+/scripts/__pycache__/*
+
+#ignore ipython checkpoints
+/.ipnyb_checkpoints/*
+
 #rivers directory of science and arts
 /river/*
