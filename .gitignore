@@ -10,5 +10,8 @@
 # ignore chache folder
 /scripts/__pycache__/*
 
+#ignore ipython checkpoints
+/.ipnyb_checkpoints/*
+
 #rivers directory of science and arts
 /river/*

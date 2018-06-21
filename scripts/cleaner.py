@@ -59,18 +59,25 @@ for row in raw[1:]:
 results = [raw[0]]
 del results[0][15] #location_description
 del results[0][21] #participant_name
-del results[0][21] #participant_relationship
+#del results[0][21] #participant_relationship
 results[0].insert(19, "participant_average_age")
 print(results[0])
 
 #append all rows to new results, inserting new values in every row
 # and removing several values from every row
 for row in raw[1:]:
-    del row[15] #location_description
-    del row[21] #participant_name
-    del row[21] #participant_relationship
-    row.insert(19,avg_age_dict[row[0]]) #insert avg_age
-    results.append(row)
+    new_row = []
+    for cell in row:
+        if cell in ('', None):
+            new_row.append('0::Unknown')
+        else:
+            new_row.append(cell)
+
+    del new_row[15] #location_description
+    del new_row[21] #participant_name
+    #del new_row[21] #participant_relationship
+    new_row.insert(19,avg_age_dict[new_row[0]]) #insert avg_age
+    results.append(new_row)
 
 #-----------------------------------------------------------------------
 
