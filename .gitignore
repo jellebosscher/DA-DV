@@ -5,7 +5,7 @@
 !/data/population/*
 
 #ignore api_keys directory
-/api_keys/
+scripts/api_keys/
 
 #ignore .DS_Store
 .DS_Store
@@ -14,7 +14,7 @@
 /scripts/__pycache__/*
 
 #ignore ipython checkpoints
-/.ipnyb_checkpoints/*
-
+/.ipnyb_checkpoints/
+scripts/.ipynb_checkpoints/
 #rivers directory of science and arts
 /river/*
