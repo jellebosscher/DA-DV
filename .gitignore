@@ -7,6 +7,9 @@
 #ignore api_keys directory
 scripts/api_keys/
 
+#ignore .DS_Store
+.DS_Store
+
 # ignore chache folder
 /scripts/__pycache__/*
 
