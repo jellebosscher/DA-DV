@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Question 1</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  <div id="header">
+    <h1>DATA ANALYSIS AND VISUALISATION: Gun-violence in the U.S.A.</h1>
+  </div>
+  <div class="main">
+    <div class="navbar"><br>
+      <ul>
+        <li><a href="index.html">Introduction</a></li>
+        <li class="selected"><a href="q1.html">Question 1</a></li>
+        <li><a href="q2.html">Question 2</a></li>
+        <li><a href="q3.html">Question 3</a></li>
+        <li><a href="q4.html">Question 4 (Extra)</a></li>
+        <li><a href="q5.html">Question 5 (Extra)</a></li>
+        <li><a href="q6.html">Question 6 (Extra)</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div id="question">
+        <p class="regular"><b><font color="CornflowerBlue ">Question 1</b>: <i>Are there any notable differences between states/cities/years? Visualize the differences (or similarities) that you can find.</font></i></p>
+      </div>
+      <br>
+      <div id="textblock">
+        <p class="regular">
+          <b>Differences between states: </b>
+          <br>
+          Since 2014 up to and including 2017, the most gun-violence incidents were reported in the state Illinois, followed up by California and Florida respectively. This has been displayed in the <a href="#incidentsperstate"><font color="#ff8c00">first graph</font></a> below. Illinois is the state with the most gun violence partly due to the fact that city Chicago is in Illinois. The last mentioned city is the city with the most gun violence of the United States. This can be seen in  <a href="#incidentspercity"><font color="#ff8c00">graph four</font></a> and below we will elaborate further on it in the next paragraphs.
+          <br>
+        </p>
+          <button class="button" onclick="showhide('incidentsperstate')">Hide or Show Graph 1</button>
+          <div id="incidentsperstate">
+            <iframe src="Graph2_Q1.html" width='1100px' height='990px' frameBorder='0' scrolling='no'></iframe>
+          </div>
+        <p class="regular">
+          <br>
+          We analyzed the different guns used in the top three states with the most incidents. This is displayed in a pie chart, see <a href="#guntypes"><font color="#ff8c00">graph two</font></a>. It is evident that handguns are the most popular in gun violence in Illinois, California and Florida. Handguns are indicated with the big blue plane in the pie chart below. However, it should be noted that a <i>9mm</i>, <i>40 Smith & Wesson</i> and a <i>45 auto</i> are examples of handguns as well, yet they are displayed seperately. This is because the different types of guns are not always recognized and so they are often generalized.
+          <br>
+        </p>
+        <button class="button" onclick="showhide('guntypes')">Hide or Show Graph 2</button>
+        <div id="guntypes">
+          <iframe src="Graph7_Q1.html" width='1100px' height='990px' frameBorder='0' scrolling='no'></iframe>
+        </div>
+        <br><br>
+        <p class="regular">
+          <br>
+          We discovered in <a href="#incidentsperhead"><font color="#ff8c00">graph three</font></a> that the most gun violence per capita happened in the state Alaska; there is one incident reported per every 574 inhabitants in the state. This is remarkable since Alaska is one of the states with a low number of reported incidents compared to the other states in the United States. It is even ranked on the twelfth place if you take a look at the states with the least reported incidents. However, as said before, it is the most violent place if you take a look at the statistics per capita. It is worth mentioning that Alaska has, on average, the least amount of gun laws of all states if you take a look at the data from 2014 up to and including 2017, that is to say that they only have 3 gun laws ACCORDING TO SARAHS INFO SCRAPED FROM WHERE??
+          Besides, the rate of forcible rape is the highest in Alaska per capita as well (1 incident per 704 inhabitants) [1: statista.com].
+          <br>
+        </p>
+          <button class="button" onclick="showhide('incidentsperhead')">Hide or Show Graph 3</button>
+          <div id="incidentsperhead">
+            <iframe src="Graph6_Q1.html" width='1100px' height='990px' frameBorder='0' scrolling='no'></iframe>
+          </div>
+          <br><br>
+          <p class="regular">
+          <b>Differences between cities: </b>
+          <br>
+          As stated before, Chicago is the city with by far the most gun violence in the United States in regard to the years 2014, 2015, 2016 and 2017. It has been displayed in  <a href="#incidentspercity"><font color="#ff8c00">graph four</font></a>. It intrigued us why this was happening. This actually passed our project a bit, since guns relate to <i>how</i> the violence is occurring. The University of Chicago reported that 20% of the gun violence suspects had more than 20 prior arrests and that nearly 20% of homicide victims had over 20 prior arrests. This lead us to believe that criminals in Chicago do not often face the consequences for their actions and that is <i>why</i> Chicago is such a violent city concerning guns.
+          <p>
+          <br>
+          <button class="button" onclick="showhide('incidentspercity')">Hide or Show Graph 4</button>
+          <div id="incidentspercity">
+            <iframe src="Graph3_Q1.html" width='1100px' height='990px' frameBorder='0' scrolling='no'></iframe>
+          </div>
+          <br>
+          <p class="regular">
+            Again we observed data from the years 2014 up to and including 2017. We observed in <a href="#killedperincident"><font color="#ff8c00">graph five</font></a> that 80 people are killed per 100 incidents in Compton. On average, 22 people are killed per 100 incidents in all cities in the United States. That means that Compton is more than three and a half times as deadly regarding gun violence as the average. When we did research to the relationship between killer and victim in Compton, we only found seven datapoints; four of them were gang-related and the other three were neighbours, family and robbery. Although Compton is known for gang-violence, we do not have access to sufficient data to state something meaningful about it.
+          </p>
+          <button class="button" onclick="showhide('killedperincident')">Hide or Show Graph 5</button>
+          <div id="killedperincident">
+            <iframe src="Graph5_Q1.html" width='1100px' height='990px' frameBorder='0' scrolling='no'></iframe>
+          </div>
+          <br><br>
+          <p class="regular">
+          <b>Differences between years: </b>
+          <br>
+          Take a look at the <a href="#incidentsreported365"><font color="#ff8c00">sixth graph</font></a>. In the year 2014, 2015 and 2016 we can see a general increase of gun violence incidents as the year passes. In contrast, we discovered a general decrease of incidents in the year 2017.
+          The underlying cause is that incidents sky rocketed on average in the end of 2016 and in the beginning of 2017. The year 2016 ended with an average of ±175 incidents per day and on the first day of 2017 there were more incidents than ever, that is to say 342 reported incidents.
+          This caused the average trend line in 2017 to start off very high and it restored slowly to a more ‘normal’ amount of an average of ±160 incidents at the end of 2017. This is quite similar to the average incidents at the end of 2015. The amount of incidents each day through the four years can be seen more clear in <a href="#incidentsreported4year"><font color="#ff8c00">graph seven</font></a>, where we display a polynominal regression line. You could see that there are 156 incidents reported on avarage at the end of 2015 (day 730) and this amount is the same on the last day of 2017 (day 1460).
+          </p>
+        <button class="button" onclick="showhide('incidentsreported365')">Hide or Show Graph 6</button>
+        <div id="incidentsreported365">
+          <iframe src="Graph1_Q1.html" width='1100px' height='990px' frameBorder='0' scrolling='no'></iframe>
+        </div>
+        <br>
+        <button class="button" onclick="showhide('incidentsreported4year')">Hide or Show Graph 7</button>
+        <div id="incidentsreported4year">
+          <iframe src="Graph4_Q1.html" width='1100px' height='990px' frameBorder='0' scrolling='no'></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  function showhide(element) {
+      var x = document.getElementById(element);
+      if (x.style.display === "none") {
+          x.style.display = "block";
+      } else {
+          x.style.display = "none";
+      }
+  }
+  </script>
+
+</body>
+</html>

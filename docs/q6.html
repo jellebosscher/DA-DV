@@ -2,21 +2,110 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Navbar</title>
+  <title>Question 6</title>
   <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-  <h1>DATA ANALYSIS AND VISUALISATION: Gun-violence in the U.S.A.</h1>
-  <div><br>
-    <ul>
-      <li><a href="index.html">Question 1</a></li>
-      <li><a href="q2.html">Question 2</a></li>
-      <li><a href="q3.html">Question 3</a></li>
-      <li><a href="q4.html">Question 4 (Extra)</a></li>
-      <li><a href="q5.html">Question 5 (Extra)</a></li>
-      <li class="selected"><a href="q6.html">Question 6 (Extra)</a></li>
-    </ul>
+  <div id="header">
+    <h1>DATA ANALYSIS AND VISUALISATION: Gun-violence in the U.S.A.</h1>
   </div>
+  <div class="main">
+    <div class="navbar"><br>
+      <ul>
+        <li><a href="index.html">Introduction</a></li>
+        <li><a href="q1.html">Question 1</a></li>
+        <li><a href="q2.html">Question 2</a></li>
+        <li><a href="q3.html">Question 3</a></li>
+        <li><a href="q4.html">Question 4 (Extra)</a></li>
+        <li><a href="q5.html">Question 5 (Extra)</a></li>
+        <li class="selected"><a href="q6.html">Question 6 (Extra)</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div id="question">
+        <p class="regular"><b><font color="CornflowerBlue ">Question 6 (Extra)</b>: <i>Trump said: "<u>In Chicago, which has the toughest gun laws in the United States, probably you could say by far, they have more gun violence than any other city. So we have the toughest laws, and you have tremendous gun violence</u>". Verify if this is correct. </font></i></p>
+      </div>
+      <br>
+      <div id="textblock">
+        <p class="regular">
+          Trump stated this on October 19, 2016. <a href="#incidentstrump"><font color="#ff8c00">Graph one</font></a> makes it obvious that Chicago has, by far, more gun violence incidents than any other city from 2014 up to October 19, 2016.
+          <br>
+        </p>
+        <button class="button" onclick="showhide('incidentstrump')">Hide or Show Graph 1</button>
+        <div id="incidentstrump">
+          <iframe src="Graph1_Q6.html" width='1100px' height='990px' frameBorder='0' scrolling='no'></iframe>
+        </div>
+        <br><br>
+        <p class="regular">
+          According to scraped data per year from State firearm Laws we found out that Illinois, the state where Chicago is located, has a mean amount of gun laws of 65 over the years 2014-2016; see <a href="#table"><font color="#ff8c00">graph two</font></a>. Taking into consideration all states, Illinois is on the seventh spot. However, the law center wrote that Illinois ranks eight if you look at the toughest gun laws per state.
+        </p>
+        <button class="button" onclick="showhide('table')">Hide or Show Graph 2</button>
+        <br><br>
+        <div id="table"><center>
+        <table>
+            <tr>
+              <th>Rank</th>
+              <th>State</th>
+              <th>Mean amount of Gun Laws 2014-2016</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>California</td>
+              <td>102.7</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Massachusetts</td>
+              <td>101.0</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Connecticut</td>
+              <td>86.7</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Hawaii</td>
+              <td>78.3</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>New York</td>
+              <td>76.0</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>New Jersey</td>
+              <td>67.0</td>
+            </tr>
+            <tr>
+              <td style="background-color: #4682B4">7</td>
+              <td style="background-color: #4682B4">Illinois</td>
+              <td style="background-color: #4682B4">65.0</td>
+            </tr>
+          </table>
+          <br>
+        </center>
+        </div>
+        <p class="regular">
+          It turns out that the statement is <b>incorrect</b>.
+        </p>
+      <br>
+    </div>
+  </div>
+
+  <script>
+  function showhide(element) {
+      var x = document.getElementById(element);
+      if (x.style.display === "none") {
+          x.style.display = "block";
+      } else {
+          x.style.display = "none";
+      }
+  }
+  </script>
+
+
 </body>
 </html>

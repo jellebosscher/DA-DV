@@ -76,3 +76,43 @@ h1 {
 	font-weight: 400;
 	font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
 }
+
+.button {
+  display: inline-block;
+  padding: 5px 8px;
+  margin: 5px 0 0 -2px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff8c00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 2px #999;
+}
+
+.button:hover {background-color: #d67602}
+
+.button:active {
+  background-color: #d67602;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

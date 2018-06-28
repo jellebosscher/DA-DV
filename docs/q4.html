@@ -2,21 +2,52 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Navbar</title>
+  <title>Question 4</title>
   <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-  <h1>DATA ANALYSIS AND VISUALISATION: Gun-violence in the U.S.A.</h1>
-  <div><br>
-    <ul>
-      <li><a href="index.html">Question 1</a></li>
-      <li><a href="q2.html">Question 2</a></li>
-      <li><a href="q3.html">Question 3</a></li>
-      <li class="selected"><a href="q4.html">Question 4 (Extra)</a></li>
-      <li><a href="q5.html">Question 5 (Extra)</a></li>
-      <li><a href="q6.html">Question 6 (Extra)</a></li>
-    </ul>
+  <div id="header">
+    <h1>DATA ANALYSIS AND VISUALISATION: Gun-violence in the U.S.A.</h1>
   </div>
+  <div class="main">
+    <div class="navbar"><br>
+      <ul>
+        <li><a href="index.html">Introduction</a></li>
+        <li><a href="q1.html">Question 1</a></li>
+        <li><a href="q2.html">Question 2</a></li>
+        <li><a href="q3.html">Question 3</a></li>
+        <li class="selected"><a href="q4.html">Question 4 (Extra)</a></li>
+        <li><a href="q5.html">Question 5 (Extra)</a></li>
+        <li><a href="q6.html">Question 6 (Extra)</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div id="question">
+        <p class="regular"><b><font color="CornflowerBlue ">Question 4 (Extra)</b>: <i>Is it possible to find a correlation between mental health and gun violence?</font></i></p>
+      </div>
+      <br>
+      <div id="textblock">
+        <p class="regular">
+          To answer this question, we realized that it required data about mental health care in every state and it required data about gun violence per capita. Per state, for every incident, we would divide it by the population of that state in that particular month and sum it up. <i>Mental Health America</i> provided us with a mental health care ranking of states. Unfortunately, the data was ranked from ‘best state to worst state’ instead of an actual score, since the latter would probably be more precise. This data is plotted in <a href="#incidentscapitahealth"><font color="#ff8c00">first graph</font></a>, which can be viewed below.
+          <br>
+        </p>
+          <button class="button" onclick="showhide('incidentscapitahealth')">Hide or Show Graph 1</button>
+          <div id="incidentscapitahealth">
+            <iframe src="Graph1_Q4.html" width='1100px' height='990px' frameBorder='0' scrolling='no'></iframe>
+          </div>
+  </div>
+
+  <script>
+  function showhide(element) {
+      var x = document.getElementById(element);
+      if (x.style.display === "none") {
+          x.style.display = "block";
+      } else {
+          x.style.display = "none";
+      }
+  }
+  </script>
+
 </body>
 </html>

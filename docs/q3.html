@@ -2,21 +2,41 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Navbar</title>
+  <title>Question 3</title>
   <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-  <h1>DATA ANALYSIS AND VISUALISATION: Gun-violence in the U.S.A.</h1>
-  <div><br>
-    <ul>
-      <li><a href="index.html">Question 1</a></li>
-      <li><a href="q2.html">Question 2</a></li>
-      <li class="selected"><a href="q3.html">Question 3</a></li>
-      <li><a href="q4.html">Question 4 (Extra)</a></li>
-      <li><a href="q5.html">Question 5 (Extra)</a></li>
-      <li><a href="q6.html">Question 6 (Extra)</a></li>
-    </ul>
+  <div id="header">
+    <h1>DATA ANALYSIS AND VISUALISATION: Gun-violence in the U.S.A.</h1>
   </div>
+  <div class="main">
+    <div class="navbar"><br>
+      <ul>
+        <li><a href="index.html">Introduction</a></li>
+        <li><a href="q1.html">Question 1</a></li>
+        <li><a href="q2.html">Question 2</a></li>
+        <li class="selected"><a href="q3.html">Question 3</a></li>
+        <li><a href="q4.html">Question 4 (Extra)</a></li>
+        <li><a href="q5.html">Question 5 (Extra)</a></li>
+        <li><a href="q6.html">Question 6 (Extra)</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <p class="regular">This is Q3</p>
+    </div>
+  </div>
+
+  <script>
+  function showhide(element) {
+      var x = document.getElementById(element);
+      if (x.style.display === "none") {
+          x.style.display = "block";
+      } else {
+          x.style.display = "none";
+      }
+  }
+  </script>
+
 </body>
 </html>

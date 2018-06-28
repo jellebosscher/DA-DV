@@ -2,21 +2,60 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Navbar</title>
+  <title>Question 5</title>
   <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-  <h1>DATA ANALYSIS AND VISUALISATION: Gun-violence in the U.S.A.</h1>
-  <div><br>
-    <ul>
-      <li><a href="index.html">Question 1</a></li>
-      <li><a href="q2.html">Question 2</a></li>
-      <li><a href="q3.html">Question 3</a></li>
-      <li><a href="q4.html">Question 4 (Extra)</a></li>
-      <li class="selected"><a href="q5.html">Question 5 (Extra)</a></li>
-      <li><a href="q6.html">Question 6 (Extra)</a></li>
-    </ul>
+  <div id="header">
+    <h1>DATA ANALYSIS AND VISUALISATION: Gun-violence in the U.S.A.</h1>
   </div>
+  <div class="main">
+    <div class="navbar"><br>
+      <ul>
+        <li><a href="index.html">Introduction</a></li>
+        <li><a href="q1.html">Question 1</a></li>
+        <li><a href="q2.html">Question 2</a></li>
+        <li><a href="q3.html">Question 3</a></li>
+        <li><a href="q4.html">Question 4 (Extra)</a></li>
+        <li class="selected"><a href="q5.html">Question 5 (Extra)</a></li>
+        <li><a href="q6.html">Question 6 (Extra)</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div id="question">
+        <p class="regular"><b><font color="CornflowerBlue ">Question 5 (Extra)</b>: <i>Which states are the most dangerous if you take population into consideration?</font></i></p>
+      </div>
+      <br>
+      <div id="textblock">
+        <p class="regular">
+          One could say that the number of incidents in a state defines how threatening or dangerous a state is.  On the other hand, the number of deaths per shooting might define the real danger of a state. Considering the population of a state, every graph is plotted per capita. <a href="#incidentsperhead"><font color="#ff8c00">Graph one</font></a> shows the number of gun violence incidents per capita for every state, while <a href="#killedcapita"><font color="#ff8c00">graph two</font></a> shows the number of people killed per incident for every state.
+          <br>
+        </p>
+        <button class="button" onclick="showhide('incidentsperhead')">Hide or Show Graph 1</button>
+        <div id="incidentsperhead">
+          <iframe src="Graph6_Q1.html" width='1100px' height='990px' frameBorder='0' scrolling='no'></iframe>
+        </div>
+        <br>
+          <button class="button" onclick="showhide('killedcapita')">Hide or Show Graph 2</button>
+          <div id="killedcapita">
+            <iframe src="Graph1_Q5.html" width='1100px' height='990px' frameBorder='0' scrolling='no'></iframe>
+          </div>
+  </div>
+    </div>
+  </div>
+
+  <script>
+  function showhide(element) {
+      var x = document.getElementById(element);
+      if (x.style.display === "none") {
+          x.style.display = "block";
+      } else {
+          x.style.display = "none";
+      }
+  }
+  </script>
+
+
 </body>
 </html>
