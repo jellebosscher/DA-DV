@@ -8,7 +8,7 @@ from geopy.geocoders import GoogleV3
 
 raw = []
 
-with open('../data/stage3.csv') as csvfile:
+with open('../data/clean_data_v3.csv') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     for row in reader:
         raw.append(row)
@@ -23,7 +23,7 @@ for attribute in raw[0]:
 
 for i in range(0,len(raw[0])):
     for row in raw[1:]:
-        if row[i] is '':
+        if row[i] is '0::Unknown':
             empty_cells_per_column[i][1] +=1
 k = 1
 for row in empty_cells_per_column:
@@ -49,6 +49,10 @@ for row in raw[1:]:
         avg_age_dict[key] = ''
 
 #TODO strip house numbers from adress.
+
+
+
+sys.exit()
 
 
 # ----------------------------------------------------------------------
