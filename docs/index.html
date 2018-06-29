@@ -23,9 +23,41 @@
       </ul>
     </div>
     <div class="content">
-      <p class="regular">This is the introduction</p>
+      <p class="regular">
+        <b>Introduction:</b>
+        <br>
+        This website is a showcase of the analysis of the <a href="https://github.com/jamesqo/gun-violence-data"><font color="#ff8c00">Gun Violence dataset</font></a>. Below is a part of the EDA for the studies.
+      </p>
+      <button class="button" onclick="showhide('missingvals')">Hide or Show Graph 1</button>
+      <br>
+      <div id="missingvals">
+        <center><img src="Graph3_Intro.jpeg"></img></center>
+      </div>
+      <br>
+      <button class="button" onclick="showhide('markers')">Hide or Show Graph 2</button>
+      <br>
+      <div id="markers">
+        <iframe src="Graph1_Intro.html" width='1100px' height='800px' frameBorder='0' scrolling='no'></iframe>
+      </div>
+      <br>
+      <button class="button" onclick="showhide('clusters')">Hide or Show Graph 3</button>
+      <br>
+      <div id="clusters">
+        <iframe src="Graph2_Intro.html" width='1100px' height='800px' frameBorder='0' scrolling='no'></iframe>
+      </div>
     </div>
   </div>
+
+  <script>
+  function showhide(element) {
+      var x = document.getElementById(element);
+      if (x.style.display === "none") {
+          x.style.display = "block";
+      } else {
+          x.style.display = "none";
+      }
+  }
+  </script>
 
 </body>
 </html>
